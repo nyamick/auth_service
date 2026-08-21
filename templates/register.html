@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>Регистрация</h1>
+
+    <p class="subtitle">Создайте новый аккаунт</p>
+
+    <form>
+
+        <input type="text" placeholder="Имя пользователя">
+
+        <input type="email" placeholder="Email">
+
+        <input type="password" placeholder="Пароль">
+
+        <input type="password" placeholder="Подтвердите пароль">
+
+        <div class="captcha-box">
+            <span>3 + 7 = ?</span>
+        </div>
+
+        <input type="number" placeholder="Ответ">
+
+        <button type="submit">Зарегистрироваться</button>
+
+    </form>
+
+    <p class="bottom-text">
+        Уже есть аккаунт?
+        <a href="/login">Войти</a>
+    </p>
+
+</div>
+
+</body>
+</html>
