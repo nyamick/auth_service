@@ -106,7 +106,7 @@ def register():
 
     
     captcha = create_captcha()
-    return render_template("register.html", captcha=captcha)
+    return render_template("index.html", captcha=captcha)
 
 
 @app.route("/login", methods=["GET", "POST"])

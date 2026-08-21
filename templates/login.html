@@ -28,17 +28,17 @@
 
         <form method="POST" id="loginForm">
 
-            <input  id = "LoginInput" type="text" name="login" placeholder="Логин или Email" required>
+            <input  id = "loginInput" type="text" name="login" placeholder="Логин или Email" required>
             <div id="loginError" class="field-error"></div>
 
-            <input  id = "LoginPassword" type="password" name="password" placeholder="Пароль" required>
+            <input  id = "loginPassword" type="password" name="password" placeholder="Пароль" required>
             <div id="loginPasswordError" class="field-error"></div>
 
             <div class="captcha-box">
                 <span>{{ captcha }} = ?</span>
             </div>
 
-            <input id = "LoginCaptcha" type="number" name="captcha" placeholder="Ответ" required>
+            <input id = "loginCaptcha" type="number" name="captcha" placeholder="Ответ" required>
             <div id="loginCaptchaError" class="field-error"></div>
 
             <div id="loginError" class="error-message"></div>

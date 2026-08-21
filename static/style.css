@@ -97,6 +97,7 @@ a:hover {
 }
 
 
+
 .message{
     background:#3a2525;
     border:1px solid #ff6666;
@@ -146,6 +147,41 @@ input.success {
     border: 1px solid #2e7d32;
 }
 
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 90px;
+}
+
+.password-field .show-password {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: #4f8cff;
+    border: none;
+
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.password-field .show-password:hover {
+    background: transparent;
+    color: #7aa7ff;
+}
 @media (max-width: 480px) {
 
     .card {
