@@ -103,3 +103,13 @@ a:hover {
     }
 
 }
+
+.message{
+    background:#3a2525;
+    border:1px solid #ff6666;
+    color:#ffd5d5;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:15px;
+    font-size:14px;
+}

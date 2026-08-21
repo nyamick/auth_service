@@ -10,11 +10,23 @@
 
 <div class="card">
 
-    <h1>Личный кабинет</h1>
+    <h1>Добро пожаловать!</h1>
 
-    <p class="subtitle">Здесь позже появятся данные пользователя.</p>
+    <p class="subtitle">{{ session.username }}</p>
 
-    <button>Выйти</button>
+    <div class="info">
+
+        <p><strong>Email:</strong> {{ session.email }}</p>
+
+        <p><strong>Дата регистрации:</strong> {{ session.created_at }}</p>
+
+        <p><strong>Роль:</strong> Пользователь</p>
+
+    </div>
+
+    <a href="/logout">
+        <button>Выйти</button>
+    </a>
 
 </div>
 
