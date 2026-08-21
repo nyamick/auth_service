@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
+</body>
+
 <body>
 
     <div class="card">
@@ -26,21 +28,33 @@
         {% endif %}
         {% endwith %}
 
-        <form method="POST">
+        <form method="POST" id="registerForm">
 
-            <input type="text" name="username" placeholder="Имя пользователя" required minlength="3" maxlength="20">
+            <input id="username" type="text" name="username" placeholder="Имя пользователя" required minlength="3"
+                maxlength="20">
 
-            <input type="email" name="email" placeholder="Email" required>
+            <div id="usernameError" class="field-error"></div>
 
-            <input type="password" name="password" placeholder="Пароль" required minlength="6">
+            <input id="email" type="email" name="email" placeholder="Email" required>
 
-            <input type="password" name="confirm" placeholder="Подтвердите пароль" required>
+            <div id="emailError" class="field-error"></div>
+
+            <input id="password" type="password" name="password" placeholder="Пароль" required minlength="6">
+
+            <div id="passwordError" class="field-error"></div>
+
+            <input id="confirm" type="password" name="confirm" placeholder="Подтвердите пароль" required>
+
+            <div id="confirmError" class="field-error"></div>
 
             <div class="captcha-box">
                 <span>{{ captcha }} = ?</span>
             </div>
 
-            <input type="number" name="captcha" placeholder="Ответ" required>
+            <input id="captcha" type="number" name="captcha" placeholder="Ответ" required>
+            <div id="captchaError" class="field-error"></div>
+
+            <div id="registerError" class="error-message"></div>
 
             <button type="submit">Зарегистрироваться</button>
 
@@ -52,6 +66,8 @@
         </p>
 
     </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
 

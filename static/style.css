@@ -96,13 +96,6 @@ a:hover {
     text-decoration: underline;
 }
 
-@media (max-width:480px){
-
-    .card{
-        width:90%;
-    }
-
-}
 
 .message{
     background:#3a2525;
@@ -112,4 +105,63 @@ a:hover {
     border-radius:8px;
     margin-bottom:15px;
     font-size:14px;
+}
+
+.error-message{
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 10px;
+    min-height: 20px;
+}
+
+button{
+    transition: transform 0.2s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+button:active{
+    transform: translateY(0);
+}
+
+.field-error {
+    display: none;
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.field-error:not(:empty) {
+    display: block;
+}
+
+input.error {
+    border: 1px solid #d93025;
+}
+
+input.success {
+    border: 1px solid #2e7d32;
+}
+
+@media (max-width: 480px) {
+
+    .card {
+        width: 90%;
+        max-width: none;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+    }
+
 }

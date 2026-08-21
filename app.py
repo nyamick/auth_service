@@ -51,7 +51,7 @@ def register():
         confirm = request.form["confirm"]
         captcha_input = request.form["captcha"]
 
-        # Сначала проверяем старую капчу
+       
         if captcha_input != str(session.get("captcha_answer")):
             flash("Неверный ответ капчи")
             return redirect("/register")
@@ -60,12 +60,16 @@ def register():
             flash("Логин должен содержать только латиницу и цифры (3–20 символов)")
             return redirect("/register")
 
-        if "@" not in email or "." not in email:
+        if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", email):
             flash("Введите корректный email")
             return redirect("/register")
 
         if len(password) < 6:
             flash("Пароль должен содержать минимум 6 символов")
+            return redirect("/register")
+
+        if not re.fullmatch(r"(?=.*[A-Za-z])(?=.*\d).+", password):
+            flash("Пароль должен содержать буквы и цифры")
             return redirect("/register")
 
         if password != confirm:
